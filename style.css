@@ -7,6 +7,14 @@ img {
     width: 100%;
 }
 
+h2, span {
+    font-weight: var(--font-semi-bold);
+}
+
+.inactive {
+    display: none;
+}
+
 button {
     border-radius: 20px;
     padding: 8px 14px;
@@ -23,9 +31,12 @@ button {
     --green-logo: #008248;
     --light-green: #d4e9e2;
     --very-light-green: #f1f8f6;
-    --cream: #f3f1e7;
+    --cream: #f2f0eb;
     --black: #000;
+    --text-black: rgba(0,0,0,.87);
     --white: #fff;
+    --light-gray: #f9f9f9;
+    --h4-gray: rgba(0,0,0,.58);
 
     /* fonts */
     --font-light: 300;
@@ -58,6 +69,7 @@ button {
     padding: 0 5%;
     color: var(--white);
     position: sticky;
+    top: 0;
 }
 
 .header-sticky p {
@@ -74,6 +86,14 @@ button {
 
 
 /* Main */
+
+main p {
+    font-size: 14px;
+}
+
+main a {
+    color: var(--green-logo);
+}
 
 .main-hero {
     text-align: center;
@@ -102,4 +122,234 @@ button {
 
 .main-hero a {
     color: var(--black);
+}
+
+
+
+.main-intro, .main-extras, .main-methods, .main-skymiles, .main-questions, .main-terms {
+    padding: 60px 5% 40px 5%;
+}
+
+.main-intro-text, .main-extras-text, .main-methods-text, .main-skymiles-text {
+    text-align: center;
+    display: grid;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+
+.main-intro-steps, .main-extras-item, .main-methods-item  {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.main-intro-steps {
+    grid-template-columns: 1fr 6fr;
+}
+
+.main-extras-item, .main-methods-item {
+    grid-template-columns: 1fr 2fr;
+}
+
+.main-intro-steps div, .main-extras-item div {
+    display: grid;
+    gap: 14px;
+}
+
+
+.main-tabs {
+    text-align: center;
+}
+
+.main-tabs-top {
+    background-color: var(--very-light-green);
+    color: var(--text-black);
+    box-shadow: drop-shadow(0px 4px 1px rgba(0,0,0,.11)) drop-shadow(0px 0px 2px rgba(0,0,0,.24));
+}
+
+.main-tabs-top h2 {
+    font-weight: var(--font-bold);
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.main-tabs-tab-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 56px;
+    place-items: center;
+}
+
+.main-tabs-tab {
+    display: flex;
+}
+
+.main-tabs-tab p {
+    font-size: 18px;
+    font-weight: var(--font-semi-bold);
+}
+
+.main-tabs-tab-star {
+    color: #cba258;
+}
+
+
+.main-tabs-bottom {
+    background-color: var(--light-green);
+    display: grid;
+    padding: 10% 5%;
+    gap: 20px;
+}
+
+.main-tabs-tab-border-container {
+    background-color: var(--light-green);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 4px;
+}
+
+.main-tabs-tab-border {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.main-methods {
+    background-color: var(--cream);
+}
+
+
+.main-extras-item-text {
+    margin: 28px 0;
+}
+
+.main-extras-item-text h3 {
+    font-weight: var(--font-semi-bold);
+}
+
+.main-methods-item div p {
+    padding-top: 16px;
+}
+
+
+
+.main-skymiles {
+    background-color: var(--light-green);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.main-skymiles figure {
+    display: grid;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.main-skymiles-star1, .main-skymiles-star2 {
+    display: grid;
+    width: 70px;
+}
+
+.main-skymiles-star2 {
+    margin: 0 0 auto auto;  
+}
+
+.main-skymiles-p {
+    text-align: center;
+    margin: 18px 0;
+}
+
+.main-skymiles button {
+    background-color: var(--green-logo);
+    margin: 0 auto;
+}
+
+/* --------------------------------------- */
+
+.main-questions {
+    padding-bottom: 60px;
+    display: grid;
+    gap: 20px;
+}
+
+
+/* ----------------------------------------------- */
+
+
+.main-terms, .main-terms div {
+    background-color: var(--light-gray);
+    display: grid;
+    gap: 16px;
+}
+
+.main-terms p {
+    font-size: 12px;
+}
+
+.main-terms h4 {
+    text-transform: uppercase;
+    color: var(--h4-gray);
+    font-weight: var(--font-bold);
+    font-size: 14px;
+}
+
+
+
+/* ------ Footer --------------- */
+
+footer {
+    padding: 40px 0;
+}
+
+.footer-content {
+    padding: 20px 5%;
+    box-shadow: 0 -1px 3px rgba(0,0,0,.1), 0 -2px 2px rgba(0,0,0,.06), 0 0 2px rgba(0,0,0,.07);
+}
+
+.footer-tab {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.footer-tab h2 {
+    font-weight: var(--font-medium);
+    font-size: 17px;
+}
+
+footer hr {
+    fill: var(--light-gray);
+}
+
+.footer-content li {
+    font-size: 14px;
+}
+
+.footer-content a {
+    color: var(--h4-gray);
+    text-decoration: none;
+}
+
+.footer-logos {
+    display: flex;
+    gap: 12px;
+    padding: 40px 0;
+}
+
+ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+li {
+    padding-bottom: 20px;
+}
+
+footer p {
+    padding-top: 10px;
+    color: var(--h4-gray);
+    font-size: 13px;
+    margin-bottom: 100px;
 }
